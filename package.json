@@ -1,0 +1,44 @@
+{
+  "name": "mcp-token-tracker",
+  "version": "0.1.0",
+  "description": "Cross-tool LLM token & cost tracker exposed as an MCP server. Aggregates usage across Copilot Chat, Claude Code, and any MCP-capable agent into a single local budget store.",
+  "type": "module",
+  "main": "src/mcp/server.js",
+  "bin": {
+    "mcp-token-tracker": "bin/mcp-token-tracker.js"
+  },
+  "scripts": {
+    "start": "node src/mcp/server.js",
+    "serve:mcp": "node src/mcp/server.js",
+    "serve:http": "node src/http/server.js",
+    "cli": "node bin/mcp-token-tracker.js",
+    "smoke": "node scripts/smoke-test.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "llm",
+    "tokens",
+    "budget",
+    "cost-tracking",
+    "copilot",
+    "claude-code",
+    "anthropic",
+    "openai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.21.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4"
+  }
+}
